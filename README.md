@@ -1,6 +1,8 @@
 # Learning Day 
 
-Work in progress.
+Work in progress! By the end of this workshop, you will have a blog running in Azure, deployed by GitHub Actions.  You will use core DevOps practices like continuous integration and continuous deployment to deploy new blog posts in a safe, repeatable and timely manner! 
+
+This workshops requires no prior knowledge of git, GitHub or Azure. 
 
 ## pre-reqs
 
