@@ -11,7 +11,30 @@ Work in progress.
 
 1. log into Azure
 1. Open cloud shell
-1. clone source code (will be a repo with barebones hugo blog in it)
+1. Setup Hugo
+```
+
+mkdir src
+cd src
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install --tags extended
+```
+```
+cd ..
+cd ..
+cd go/bin
+```
+#Verify you see Hugo
+#add it to path:
+```
+PATH=$PATH:~/go/bin
+```
+```
+cd ..
+cd..
+hugo version
+```
 1. explore with vs code in browser
 
 ## Step 2
