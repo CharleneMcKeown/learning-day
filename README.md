@@ -39,10 +39,49 @@ hugo version
 
 ## Step 2
 
+1. Create a new website
+```
+hugo new site static-blog
+```
+
+1. Add a theme
+```
+cd static-blog
+git init
+git submodule add https://github.com/your-identity/hugo-theme-dimension.git themes/dimension
+```
+```
+echo 'theme = "dimension"' >> config.toml
+```
+
 1. open new browser - type repo.new
-1. create a new repo
+1. create a new repo - but don't initialize it yet. copy the commands to 'push existing repo'
+
+```
+git remote add origin https://github.com/youraccount/yourrepo.git
+git push -u origin master
+```
+1. create a personal access token
 1. come back to cloud shell
-1. git push mirror to new repo
+1. configure git
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+1. explain git status, add and commit process
+```
+git status
+git add .
+git commit -m "added a theme"
+```
+
+1. git push
+
+```
+git remote add origin https://github.com/youraccount/your-repo.git
+git push -u origin master
+```
+TADA!
 
 ## Step 3
 
