@@ -81,6 +81,7 @@ git commit -m "added a theme"
 git remote add origin https://github.com/youraccount/your-repo.git
 git push -u origin master
 ```
+If it's your first time using GitHub from Cloud Shell, you will be prompted to login. Use your account name and the personal access token you generated earlier.
 TADA!
 
 ## Step 3
