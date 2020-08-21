@@ -48,10 +48,10 @@ hugo new site static-blog
 ```
 cd static-blog
 git init
-git submodule add https://github.com/your-identity/hugo-theme-dimension.git themes/dimension
+git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 ```
 ```
-echo 'theme = "dimension"' >> config.toml
+echo 'theme = "ananke"' >> config.toml
 ```
 
 1. open new browser - type repo.new
@@ -68,6 +68,9 @@ git push -u origin master
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
+
+## need a step to setup credential manager?
+
 1. explain git status, add and commit process
 ```
 git status
@@ -96,7 +99,13 @@ TADA!
 
 1. checkout your empty static site!
 1. in cloud shell write a blog post
-1. we could include some tips for styling to make it more snazzy
+```
+hugo new posts/my-first-post.md
+```
+1. ensure draft:false
+1. configure config.toml to change site name
+1. git pull first
+1. git add .
 1. git commit and push - CI in action
 1. observe the workflow and deployment - CD
 
