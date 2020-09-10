@@ -9,18 +9,18 @@ This workshops requires no prior knowledge of git, GitHub or Azure.
 1. Azure Visual Studio subscription enabled
 1. GitHub Account
 
-## Step 1
-
-1. Setup your work environment
+## Set up your workspace
 
 Codespaces are...
 
 1. Visit https://aka.ms/vso-login to log in and get started. You will need to use the identity you used when creating your Visual Studio Subscription.
+<br>
 1. If you have never used Codespaces before, you'll need to create a plan. Click on **Create Codespace** to create a billing plan. 
 
     ![create-cs0.PNG](./images/create-cs0.PNG)
-
+<br>
 1. Choose your Visual Studio Subscription and leave the location on West Europe. You can leave Advanced Options on their defaults. Click **Create**.
+<br>
 
     ![create-cs1.PNG](./images/create-cs1.PNG)
 
@@ -28,19 +28,37 @@ Codespaces are...
 ```
 https://github.com/gohugoio/hugo.git
 ```
+
 Leave everything else on their default settings. Click **Create**.
     ![create-cs.PNG](./images/create-cs.PNG)
 
 After a few moments, you should see your new Codespace ready to go! 
 
-![vscode.PNG](./images/vscode.PNG)
+    ![vscode.PNG](./images/vscode.PNG)
 
 Let's spend a moment exploring the menu. If you have spent time using VS Code before and are comfortable, feel free to skip to the next step.
+
+todo.. vscode intro
 
 
 1. Setup Hugo
 ```
+go install --tags extended
+```
 
+```
+export PATH=/go/bin:$PATH
+```
+
+Verify the installation:
+
+```
+hugo version
+```
+
+
+these steps if not using Azure Cloud Shell rather than codespaces:
+```
 mkdir src
 cd src
 git clone https://github.com/gohugoio/hugo.git
@@ -96,7 +114,7 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
-## need a step to setup credential manager?
+##### need a step to setup credential manager?
 
 1. explain git status, add and commit process
 ```
@@ -136,6 +154,6 @@ hugo new posts/my-first-post.md
 1. git commit and push - CI in action
 1. observe the workflow and deployment - CD
 
-## Encourage people to share their first blog post on LinkedIn with a #LearningDay? 
+##### Encourage people to share their first blog post on LinkedIn & Twitter with a #LearningDay? 
 
-## Could have a Logic App triggering on when it detects a new linkedin 
+##### Could have a Logic App triggering on when it detects a new post 
