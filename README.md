@@ -11,8 +11,33 @@ This workshops requires no prior knowledge of git, GitHub or Azure.
 
 ## Step 1
 
-1. log into Azure
-1. Open cloud shell
+1. Setup your work environment
+
+Codespaces are...
+
+1. Visit https://aka.ms/vso-login to log in and get started. You will need to use the identity you used when creating your Visual Studio Subscription.
+1. If you have never used Codespaces before, you'll need to create a plan. Click on **Create Codespace** to create a billing plan. 
+
+    ![create-cs0.PNG](./images/create-cs0.PNG)
+
+1. Choose your Visual Studio Subscription and leave the location on West Europe. You can leave Advanced Options on their defaults. Click **Create**.
+
+    ![create-cs1.PNG](./images/create-cs1.PNG)
+
+1. Now you can create your Codespace. Give it a name, and then paste in the following link in the **Git Repository** field. 
+```
+https://github.com/gohugoio/hugo.git
+```
+Leave everything else on their default settings. Click **Create**.
+    ![create-cs.PNG](./images/create-cs.PNG)
+
+After a few moments, you should see your new Codespace ready to go! 
+
+![vscode.PNG](./images/vscode.PNG)
+
+Let's spend a moment exploring the menu. If you have spent time using VS Code before and are comfortable, feel free to skip to the next step.
+
+
 1. Setup Hugo
 ```
 
@@ -111,3 +136,6 @@ hugo new posts/my-first-post.md
 1. git commit and push - CI in action
 1. observe the workflow and deployment - CD
 
+## Encourage people to share their first blog post on LinkedIn with a #LearningDay? 
+
+## Could have a Logic App triggering on when it detects a new linkedin 
