@@ -34,14 +34,37 @@ Leave everything else on their default settings. Click **Create**.
 
 After a few moments, you should see your new Codespace ready to go! 
 
-    ![vscode.PNG](./images/vscode.PNG)
+![vscode.PNG](./images/vscode.PNG)
 
-Let's spend a moment exploring the menu. If you have spent time using VS Code before and are comfortable, feel free to skip to the next step.
+Let's spend a moment exploring the menu. If you have spent time using VS Code before and are comfortable, feel free to skip to the next step - [Setup Hugo](#Setup-Hugo).
 
 todo.. vscode intro
 
 
-1. Setup Hugo
+## Setup Hugo
+
+Hugo is a static site generator. A static site contains web pages with fixed content, and displays the same content to every user who visits the web page. Generally, static sites are made up of HTML pages that are stored as files in a file system somewhere. They can utilise CSS for styling and Javascript for more complex features like page transitions, menus and buttons.
+
+Dynamic sites work differently. They generate their content based on making a database request. Think about a site like Netflix.com. You can log in, and you will see your library of favourite shows and movies to watch. Those are generated dynamically, and will be different for every user.
+
+###### A History Lesson
+
+Back in the early days of the web, static sites were prevalent. [Geocities, anyone?!](https://www.geocitiesarchive.org/index.html)
+
+As time passed and e-commerce become more prevalent, dynamic sites backed by databases became the norm, allowing users to log into websites, place orders and write reviews. 
+
+Static sites have had a resurgence over the last few years, especially with the entrance of static site generators. They make it really very easy to build your static site. They basically run a script that takes your content (in today's example, a blog post), combines that data with templates and outputs a folder with all of the HTML and assets you need to publish your site.
+
+There are major advantages to using static sites.
+
+- They are seriously fast to load (it's just HTML!)
+- They are cheap to host (no database or backend server necessary)
+- They are easy to backup and deploy (it's just HTML!)
+
+Back to [Hugo!](https://gohugo.io/) It's open source, extremely popular, and it has a bunch of templates that you can use to really customise and make your website your own. Let's get started with it now.
+
+
+
 ```
 go install --tags extended
 ```
