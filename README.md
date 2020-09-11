@@ -14,7 +14,7 @@ This workshops requires no prior knowledge of git, GitHub or Azure.
 Codespaces are...
 
 1. Visit https://aka.ms/vso-login to log in and get started. You will need to use the identity you used when creating your Visual Studio Subscription.
-<br>
+
 1. If you have never used Codespaces before, you'll need to create a plan. Click on **Create Codespace** to create a billing plan. 
 
     <img src="./images/create-cs0.PNG" alt="Create Codespace" width=800px />
