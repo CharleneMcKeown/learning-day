@@ -17,24 +17,24 @@ Codespaces are...
 <br>
 1. If you have never used Codespaces before, you'll need to create a plan. Click on **Create Codespace** to create a billing plan. 
 
-    ![create-cs0.PNG](./images/create-cs0.PNG)
-<br>
-1. Choose your Visual Studio Subscription and leave the location on West Europe. You can leave Advanced Options on their defaults. Click **Create**.
-<br>
+    <img src="./images/create-cs0.PNG" alt="Create Codespace" width=800px />
 
-    ![create-cs1.PNG](./images/create-cs1.PNG)
+1. Choose your Visual Studio Subscription and leave the location on West Europe. You can leave Advanced Options on their defaults. Click **Create**.
+    <br>
+    <img src="./images/create-cs1.PNG" alt="Create Billing Plan" width=400px />
 
 1. Now you can create your Codespace. Give it a name, and then paste in the following link in the **Git Repository** field. 
-```
-https://github.com/gohugoio/hugo.git
-```
+    <br>
+    ```
+    https://github.com/gohugoio/hugo.git
+    ```
 
-Leave everything else on their default settings. Click **Create**.
-    ![create-cs.PNG](./images/create-cs.PNG)
+    Leave everything else on their default settings. Click **Create**.
+    <br>
+     <img src="./images/create-cs.PNG" alt="Create Codespace" width=400px />   
+    After a few moments, you should see your new Codespace ready to go! 
 
-After a few moments, you should see your new Codespace ready to go! 
-
-![vscode.PNG](./images/vscode.PNG)
+    <img src="./images/vscode.PNG" alt="Create Codespace" width=800px />
 
 Let's spend a moment exploring the menu. If you have spent time using VS Code before and are comfortable, feel free to skip to the next step - [Setup Hugo](#Setup-Hugo).
 
@@ -65,30 +65,32 @@ Back to [Hugo!](https://gohugo.io/) It's open source, extremely popular, and it 
 
 1. Open a new terminal in VS Code by clicking on the hamburger menu icon and selecting Terminal > New Terminal.
 
-    ![new-terminal.PNG](./images/new-terminal.PNG)
-<br>
+    <br>
+    <img src="./images/new-terminal.PNG" alt="New Terminal" width=600px />
+
 1. Run the following command in the terminal that just opened at the bottom of your screen.
 
-![install-hugo.PNG](./images/install-hugo.PNG)
+    ```
+    go install --tags extended
+    ```
+    
+    <img src="./images/install-hugo.PNG" alt="Install Hugo" width=600px />
 
-```
-go install --tags extended
-```
-We are simply installing Hugo to our Codespace environment with this command. You will see a lot of scrolling text for a minute or two. Wait for this to complete, and then add Hugo to your path by typing the below command.
+    We are simply installing Hugo to our Codespace environment with this command. You will see a lot of scrolling text for a minute or two. Wait for this to complete, and then add Hugo to your path by typing the below command.
 
-```
-export PATH=/go/bin:$PATH
-```
+    ```
+    export PATH=/go/bin:$PATH
+    ```
 
-Verify the installation has been successful by typing the below:
+    Verify the installation has been successful by typing the below:
 
-```
-hugo version
-```
+    ```
+    hugo version
+    ```
 
-If successful, you will see the below image:
+    If successful, you will see the below image:
 
-![hugo.PNG](./images/hugo.PNG)
+    <img src="./images/hugo.PNG" alt="Install Hugo" width=600px />
 
 
 these steps if not using Azure Cloud Shell rather than codespaces:
@@ -118,18 +120,21 @@ hugo version
     ```
     hugo new site static-blog
     ```
-    You should get a "Congratulations!" message: <br>
-    ![hugo-new.PNG](./images/hugo-new.PNG)
-
+    You should get a "Congratulations!" message: 
+    <br>
+    <img src="./images/hugo-new.PNG" alt="Create new Hugo site" width=600px />
+    <br>
 1. Next, let's add a theme to the website.
-
-    The first command changes directory into the static site folder. The second command initiliazes this folder as a Git repository. The third command adds a reference to a specific theme for Hugo, which can be found in another Github repository. 
+    
     ```
     cd static-blog
     git init
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
     ```
-    ![git-init.PNG](./images/git-init.PNG) 
+
+    The first command changes directory into the static site folder. The second command initiliazes this folder as a Git repository. The third command adds a reference to a specific theme for Hugo, which can be found in another Github repository. 
+    <br>
+    <img src="./images/git-init.PNG" alt="Git Init" width=600px />
     <br>
 
     We need to add our theme to a configuration file, which lets Hugo know what we want the site to look like:
