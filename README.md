@@ -63,21 +63,32 @@ There are major advantages to using static sites.
 
 Back to [Hugo!](https://gohugo.io/) It's open source, extremely popular, and it has a bunch of templates that you can use to really customise and make your website your own. Let's get started with it now.
 
+1. Open a new terminal in VS Code by clicking on the hamburger menu icon and selecting Terminal > New Terminal.
 
+    ![new-terminal.PNG](./images/new-terminal.PNG)
+<br>
+1. Run the following command in the terminal that just opened at the bottom of your screen.
+
+![install-hugo.PNG](./images/install-hugo.PNG)
 
 ```
 go install --tags extended
 ```
+We are simply installing Hugo to our Codespace environment with this command. You will see a lot of scrolling text for a minute or two. Wait for this to complete, and then add Hugo to your path by typing the below command.
 
 ```
 export PATH=/go/bin:$PATH
 ```
 
-Verify the installation:
+Verify the installation has been successful by typing the below:
 
 ```
 hugo version
 ```
+
+If successful, you will see the below image:
+
+![hugo.PNG](./images/hugo.PNG)
 
 
 these steps if not using Azure Cloud Shell rather than codespaces:
@@ -88,12 +99,8 @@ git clone https://github.com/gohugoio/hugo.git
 cd hugo
 go install --tags extended
 ```
-```
-cd ..
-cd ..
-cd go/bin
-```
-#Verify you see Hugo
+
+Verify you see Hugo
 #add it to path:
 ```
 PATH=$PATH:~/go/bin
@@ -107,20 +114,42 @@ hugo version
 
 ## Step 2
 
-1. Create a new website
-```
-hugo new site static-blog
-```
+1. Create a new website by typing the following command into your terminal.
+    ```
+    hugo new site static-blog
+    ```
+    You should get a "Congratulations!" message: <br>
+    ![hugo-new.PNG](./images/hugo-new.PNG)
 
-1. Add a theme
-```
-cd static-blog
-git init
-git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-```
-```
-echo 'theme = "ananke"' >> config.toml
-```
+1. Next, let's add a theme to the website.
+
+    The first command changes directory into the static site folder. The second command initiliazes this folder as a Git repository. The third command adds a reference to a specific theme for Hugo, which can be found in another Github repository. 
+    ```
+    cd static-blog
+    git init
+    git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+    ```
+    ![git-init.PNG](./images/git-init.PNG) 
+    <br>
+
+    We need to add our theme to a configuration file, which lets Hugo know what we want the site to look like:
+
+    ```
+    echo 'theme = "ananke"' >> config.toml
+    ```
+1. So far we have typed a bunch of commands. You have enough at this point to actually check out what your website looks like. Type one more command:
+
+    ```
+    hugo server -D
+    ```
+    ![hugo-server.PNG](./images/hugo-server.PNG) 
+
+What is really cool about Codespaces is that we can actually visit your site through the magic of port forwarding! Your website is now running inside your Codespace. Click on the link in your terminal to visit it.
+
+![hugo-site.PNG](./images/hugo-site.PNG) 
+
+
+## Setup GitHub
 
 1. open new browser - type repo.new
 1. create a new repo - but don't initialize it yet. copy the commands to 'push existing repo'
