@@ -93,25 +93,7 @@ Back to [Hugo!](https://gohugo.io/) It's open source, extremely popular, and it 
     <img src="./images/hugo.PNG" alt="Install Hugo" width=600px />
 
 
-these steps if not using Azure Cloud Shell rather than codespaces:
-```
-mkdir src
-cd src
-git clone https://github.com/gohugoio/hugo.git
-cd hugo
-go install --tags extended
-```
 
-Verify you see Hugo
-#add it to path:
-```
-PATH=$PATH:~/go/bin
-```
-```
-cd ..
-cd..
-hugo version
-```
 1. explore with vs code in browser
 
 ## Step 2
@@ -177,7 +159,8 @@ What is really cool about Codespaces is that we can actually visit your site thr
     ```
     git config --global user.email "you@example.com"
     git config --global user.name "Your Name"
-    git commit -am 'adding my static site files'
+    git add .
+    git commit -m 'adding my static site files'
     ```
     What you have done here is asked git to track those files and folders that are necessary to build your static site. You have also configured git to use your name and email, so any commit you make can be traced back to you. 
 
@@ -197,45 +180,56 @@ What is really cool about Codespaces is that we can actually visit your site thr
 
 1. Copy the below commands into your Codespace terminal, replacing **youraccount** with your GitHub account name.
 
-```
-git remote add origin https://github.com/youraccount/learningday.git
-git push -u origin master
-```
-1. create a personal access token
-1. come back to cloud shell
-1. configure git
-```
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
-```
+    ```
+    git remote add origin https://github.com/youraccount/learningday.git
+    git push -u origin master
+    ```
+    You will be prompted to authorize Codespaces with your GitHub account - go ahead and do this.
 
-##### need a step to setup credential manager?
+    <img src="./images/authorise-vs.PNG" alt="Authorise VS"/>
 
-1. explain git status, add and commit process
-```
-git status
-git add .
-git commit -m "added a theme"
-```
+    Afterwards, you should see all of your files in the remote repo:
 
-1. git push
+    <img src="./images/repo.PNG" alt="repo"/>
 
-```
-git remote add origin https://github.com/youraccount/your-repo.git
-git push -u origin master
-```
-If it's your first time using GitHub from Cloud Shell, you will be prompted to login. Use your account name and the personal access token you generated earlier.
-TADA!
 
-## Step 3
+## Publish your static site
 
-1. Create static site in Azure
-1. point it to your new repo
+Now that we have the barebones of your website, and a repo hosting your code, you need somewhere to publish that code to.
+
+Azure Static Web Apps is a service that automatically builds and deploys web apps to Azure from a GitHub repository.
+
+1. Navigate to http://portal.azure.com and log in.
+1. On the homepage, search for **Static Web Apps** and click on the marketplace icon.
+    <img src="./images/create-static-site.PNG" alt="Create static web app"/>
+1. Fill in the following details:
+
+    - Subscription: Choose your **Visual Studio Subscription**
+    - Resource Group:Create a new one called **learningday-rg**
+    - Static Web App Name: **learning day**
+    - Region: **West Europe**
+        <img src="./images/create-static-site2.PNG" alt="Create static web app"/>
+1. Click on **Sign in with GitHub** and authorise connection.
+1. Fill in the following details:
+**
+    - Organisation: **Your GitHub Account name**
+    - Repository: **learningday**
+    - Branch: **master**
+    - Build Presets: **Hugo**
+    - App Location: **/**
+    - Api Location: **Leave this blank**
+    - App artifact location: **public**
+
+    <img src="./images/create-static-site3.PNG" alt="Create static web app"/>
+1. Click **Review + create**
+
+
+
 1. navigate to new repo
 1. explore .github folder 
 1. explore running Action
 
-## Step 4 
+## Step 5
 
 1. checkout your empty static site!
 1. in cloud shell write a blog post
@@ -252,3 +246,24 @@ hugo new posts/my-first-post.md
 ##### Encourage people to share their first blog post on LinkedIn & Twitter with a #LearningDay? 
 
 ##### Could have a Logic App triggering on when it detects a new post 
+
+
+these steps if not using Azure Cloud Shell rather than codespaces:
+```
+mkdir src
+cd src
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install --tags extended
+```
+
+Verify you see Hugo
+#add it to path:
+```
+PATH=$PATH:~/go/bin
+```
+```
+cd ..
+cd..
+hugo version
+```
