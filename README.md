@@ -147,20 +147,58 @@ hugo version
     ```
     hugo server -D
     ```
-    ![hugo-server.PNG](./images/hugo-server.PNG) 
+    <img src="./images/hugo-server.PNG" alt="Hugo server" width=600px />
 
 What is really cool about Codespaces is that we can actually visit your site through the magic of port forwarding! Your website is now running inside your Codespace. Click on the link in your terminal to visit it.
 
-![hugo-site.PNG](./images/hugo-site.PNG) 
+<img src="./images/hugo-site.PNG" alt="Hugo site" width=600px />
 
 
 ## Setup GitHub
 
-1. open new browser - type repo.new
-1. create a new repo - but don't initialize it yet. copy the commands to 'push existing repo'
+1. In your Codespace terminal, type:
+
+    ```
+    git status
+    ```
+    <img src="./images/git-status.PNG" alt="Git Status"/>
+
+    This is a useful command, and one to use often. It tells us a few things about our Git repository. 
+
+    - We are on the master branch
+    - We haven't made any commits yet
+    - We have changes that need to be committed
+    - We have untracked files
+
+    Todo: insert guidance on branches, commits, tracking files.
+
+1. In your Codespace terminal, type each command below. Be sure to replace your email and your name.
+
+    ```
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+    git commit -am 'adding my static site files'
+    ```
+    What you have done here is asked git to track those files and folders that are necessary to build your static site. You have also configured git to use your name and email, so any commit you make can be traced back to you. 
+
+    <img src="./images/git-commit.PNG" alt="Git commit"/>
+
+    Now we have git configured locally, we need to create a repository to host our code. We shouldn't rely on keeping our code locally or in a Codespace.
+
+1. Open up a new browser and type **repo.new** - this is actually a domain owned by GitHub that gives us a nice shortcut to create a new repo! You may be prompted to log in or create an account.
+
+1. Create a new repo called learningday - but don't initialize it yet (we are going to push our existing repository instead).
+
+    <img src="./images/new-repo.PNG" alt="New repo"/>
+
+    Once you hit the screen below, go back to your Codespace.
+
+    <img src="./images/new-repo2.PNG" alt="New repo"/>
+
+1. Copy the below commands into your Codespace terminal, replacing **youraccount** with your GitHub account name.
 
 ```
-git remote add origin https://github.com/youraccount/yourrepo.git
+git remote add origin https://github.com/youraccount/learningday.git
 git push -u origin master
 ```
 1. create a personal access token
