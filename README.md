@@ -221,27 +221,88 @@ Azure Static Web Apps is a service that automatically builds and deploys web app
     - App artifact location: **public**
 
     <img src="./images/create-static-site3.PNG" alt="Create static web app"/>
+
 1. Click **Review + create**
 
+1. Head back to your GitHub repo and refresh the page. You will see a new folder in your repo called **.github/workflows**
+    <img src="./images/workflowfolder.PNG" alt="workflow"/>
 
+    When you created the static web app just now, Azure pushed a new commit to our repo which contained a file called **azure-static-web-apps-yourappname.yml**. 
 
-1. navigate to new repo
-1. explore .github folder 
-1. explore running Action
+    This is a [workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows) file, and it contains all the instructions needed to build and deploy your static web app to Azure. 
+    
+    [GitHub Actions](https://docs.github.com/en/actions) uses these files to build end-to-end continuous integration (CI) and continuous deployment (CD) capabilities directly in your repository.
 
-## Step 5
+1. Click on the **Actions** tab in your repo. You might see that that the workflow is still running. Click on it to view the live logs.
 
-1. checkout your empty static site!
-1. in cloud shell write a blog post
-```
-hugo new posts/my-first-post.md
-```
-1. ensure draft:false
-1. configure config.toml to change site name
-1. git pull first
-1. git add .
-1. git commit and push - CI in action
-1. observe the workflow and deployment - CD
+    <img src="./images/action.PNG" alt="action"/>
+
+    In this example, the workflow is on the **Build and Deploy** job. 
+
+    <img src="./images/action2.PNG" alt="action"/>
+
+    Wait for the workflow to successfully complete.
+
+1. Go back to Azure and find your recently deployed static web app. You can search **Static Web App** in the search bar of the Azure Portal if you can't find it. Once found, click on it and find the URL of your web app (it's in the far right of the screenshot below).
+
+1. Click on it, and you should see your empty blog. Time to update it!
+
+    <img src="./images/staticwebapp.PNG" alt="Static Web App"/>
+
+## Use CI & CD to update the blog
+
+Continuous integration is..
+
+Continuous deployment is.. 
+
+1. Go back to your Codespace terminal.
+
+    >Note: If your Codespace has timed out, make sure you change directory back into static-blog by typing **cd static-blog**.
+
+1. Create a new post by typing the following:
+    ```
+    hugo new posts/my-first-post.md
+    ```
+
+1. Find the file you just created in the file explorer to the left. It will be in **static-blog/content/posts**.
+    <img src="./images/first-post.PNG" alt="First post"/>
+
+1. Set draft: false and write some text below the second ---. Once you are finished, save the post by typing Ctrl + S.
+
+1. Find the config.toml (it will be in the root of your static-blog folder) and change the title name to whatever you want it to be, then save it with Ctrl + S.
+    <img src="./images/title.PNG" alt="title"/>
+
+1. In your terminal, type:
+
+    ```
+    git pull
+    ```
+    This command pulls down any changes from our remote repo into our local repo. You will see that the .github folder now exists locally, along with your workflow file. 
+
+    Always do a git pull before a git push!
+
+1. In your terminal, type: 
+    ```
+    git add .
+    ```
+    Remember, this commands adds any new or untracked files we created to git. 
+
+1. Now we can practice continuous integration! We have made changes locally, so we can now commit and push those to our GitHub repo. Type:
+
+    ```
+    git commit -m "added my first blog post"
+    ```
+1. Go back to your GitHub repo and observe the updated files. You should now see a content/posts directory which Hugo created for you locally when you created your first post.
+
+    <img src="./images/content-posts.PNG" alt="content/posts"/>
+
+1. Click on **Actions** to observe your workflow running for a second time. You can see that the workflow tell us that it is linked to the commit we just made (added my first blog post). Optionally, click on it to view the logs again.
+
+    <img src="./images/workflow2.PNG" alt="content/posts"/>
+
+1. Finally, once the workflow completes successfully, refresh your static web app. You should see an updated title and your first post!
+
+    <img src="./images/blog.PNG" alt="blog"/>
 
 ##### Encourage people to share their first blog post on LinkedIn & Twitter with a #LearningDay? 
 
