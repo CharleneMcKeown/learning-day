@@ -4,6 +4,8 @@ By the end of this workshop, you will have a blog running in Azure, deployed by 
 
 This workshops requires no prior knowledge of git, GitHub or Azure. 
 
+<img src="./images/flow.PNG" />
+
 ## Pre-reqs
 
 1. Azure Visual Studio Subscription enabled
