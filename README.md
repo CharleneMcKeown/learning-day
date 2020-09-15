@@ -1,17 +1,17 @@
-# Learning Day 
+# Microsoft UK Learning Day DevOps WorkShop (September 24th 2020)
 
-Work in progress! By the end of this workshop, you will have a blog running in Azure, deployed by GitHub Actions.  You will use core DevOps practices like continuous integration and continuous deployment to deploy new blog posts in a safe, repeatable and timely manner! 
+By the end of this workshop, you will have a blog running in Azure, deployed by GitHub Actions.  You will use core DevOps practices like continuous integration and continuous deployment to deploy new blog posts in a safe, repeatable and timely manner! 
 
 This workshops requires no prior knowledge of git, GitHub or Azure. 
 
-## pre-reqs
+## Pre-reqs
 
-1. Azure Visual Studio subscription enabled
+1. Azure Visual Studio Subscription enabled
 1. GitHub Account
 
-## Set up your workspace
+## Step 1 - Set up your workspace
 
-Codespaces are...
+Codespaces are... TODO
 
 1. Visit https://aka.ms/vso-login to log in and get started. You will need to use the identity you used when creating your Visual Studio Subscription.
 
@@ -36,14 +36,14 @@ Codespaces are...
 
     <img src="./images/vscode.PNG" alt="Create Codespace" width=800px />
 
-Let's spend a moment exploring the menu. If you have spent time using VS Code before and are comfortable, feel free to skip to the next step - [Setup Hugo](#Setup-Hugo).
+Let's spend a moment exploring the menu. If you have spent time using VS Code before and are comfortable, feel free to skip to the next step - [Setup Hugo](#Step-2).
 
 todo.. vscode intro
 
 
-## Setup Hugo
+## Step 2 - Setup Hugo
 
-Hugo is a static site generator. A static site contains web pages with fixed content, and displays the same content to every user who visits the web page. Generally, static sites are made up of HTML pages that are stored as files in a file system somewhere. They can utilise CSS for styling and Javascript for more complex features like page transitions, menus and buttons.
+[Hugo](https://gohugo.io/) is a static site generator. A static site contains web pages with fixed content, and displays the same content to every user who visits the web page. Generally, static sites are made up of HTML pages that are stored as files in a file system somewhere. They can utilise CSS for styling and Javascript for more complex features like page transitions, menus and buttons.
 
 Dynamic sites work differently. They generate their content based on making a database request. Think about a site like Netflix.com. You can log in, and you will see your library of favourite shows and movies to watch. Those are generated dynamically, and will be different for every user.
 
@@ -61,7 +61,7 @@ There are major advantages to using static sites.
 - They are cheap to host (no database or backend server necessary)
 - They are easy to backup and deploy (it's just HTML!)
 
-Back to [Hugo!](https://gohugo.io/) It's open source, extremely popular, and it has a bunch of templates that you can use to really customise and make your website your own. Let's get started with it now.
+Back to Hugo. It's open source, extremely popular, and it has a bunch of templates that you can use to really customise and make your website your own. Let's get started with it now.
 
 1. Open a new terminal in VS Code by clicking on the hamburger menu icon and selecting Terminal > New Terminal.
 
@@ -93,10 +93,7 @@ Back to [Hugo!](https://gohugo.io/) It's open source, extremely popular, and it 
     <img src="./images/hugo.PNG" alt="Install Hugo" width=600px />
 
 
-
-1. explore with vs code in browser
-
-## Step 2
+## Step 3 - Create a Hugo website
 
 1. Create a new website by typing the following command into your terminal.
     ```
@@ -136,7 +133,7 @@ What is really cool about Codespaces is that we can actually visit your site thr
 <img src="./images/hugo-site.PNG" alt="Hugo site" width=600px />
 
 
-## Setup GitHub
+## Step 4 - Setup GitHub
 
 1. In your Codespace terminal, type:
 
@@ -193,7 +190,7 @@ What is really cool about Codespaces is that we can actually visit your site thr
     <img src="./images/repo.PNG" alt="repo"/>
 
 
-## Publish your static site
+## Step 5 - Publish your static site
 
 Now that we have the barebones of your website, and a repo hosting your code, you need somewhere to publish that code to.
 
@@ -249,7 +246,7 @@ Azure Static Web Apps is a service that automatically builds and deploys web app
 
     <img src="./images/staticwebapp.PNG" alt="Static Web App"/>
 
-## Use CI & CD to update the blog
+## Step 6 - Use CI & CD to update the blog
 
 Continuous integration is..
 
@@ -304,27 +301,11 @@ Continuous deployment is..
 
     <img src="./images/blog.PNG" alt="blog"/>
 
+### Wrap Up - What have I learned?
+
+ToDo
+
 ##### Encourage people to share their first blog post on LinkedIn & Twitter with a #LearningDay? 
 
 ##### Could have a Logic App triggering on when it detects a new post 
 
-
-these steps if not using Azure Cloud Shell rather than codespaces:
-```
-mkdir src
-cd src
-git clone https://github.com/gohugoio/hugo.git
-cd hugo
-go install --tags extended
-```
-
-Verify you see Hugo
-#add it to path:
-```
-PATH=$PATH:~/go/bin
-```
-```
-cd ..
-cd..
-hugo version
-```
