@@ -38,7 +38,7 @@ Codespaces are... TODO
 
     <img src="./images/vscode.PNG" alt="Create Codespace" width=800px />
 
-Let's spend a moment exploring the menu. If you have spent time using VS Code before and are comfortable, feel free to skip to the next step - [Setup Hugo](#Step-2).
+Let's spend a moment exploring the menu. If you have spent time using VS Code before and are comfortable, feel free to skip to Step 2 - Setup Hugo.
 
 todo.. vscode intro
 
