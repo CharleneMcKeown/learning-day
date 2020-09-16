@@ -290,6 +290,7 @@ Continuous deployment is..
 
     ```
     git commit -m "added my first blog post"
+    git push
     ```
 1. Go back to your GitHub repo and observe the updated files. You should now see a content/posts directory which Hugo created for you locally when you created your first post.
 
