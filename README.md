@@ -13,7 +13,10 @@ This workshops requires no prior knowledge of git, GitHub or Azure.
 
 ## Step 1 - Set up your workspace
 
-Codespaces are... TODO
+[Codespaces](https://visualstudio.microsoft.com/services/visual-studio-codespaces/) is a development environment that you can use with only a web browser. It is cloud based, which means you can connect to it from anywhere, and you can create one in just a minute or two.
+
+It's a really quick and easy way to start developing software or working on projects, without having to install software on your own computer. Codespaces provides you with Visual Studio Code and is configured to run git. You can even configure it with other tools and dependencies you need for your specific project.
+
 
 1. Visit https://aka.ms/vso-login to log in and get started. You will need to use the identity you used when creating your Visual Studio Subscription.
 
@@ -38,9 +41,8 @@ Codespaces are... TODO
 
     <img src="./images/vscode.PNG" alt="Create Codespace" width=800px />
 
-Let's spend a moment exploring the menu. If you have spent time using VS Code before and are comfortable, feel free to skip to [Step 2 - Setup Hugo](#step-2---setup-hugo).
 
-todo.. vscode intro
+On the left hand side, you will see a list of files - these files automatically got added to our codespace based on the Hugo GitHub repo we specified earlier. 
 
 
 ## Step 2 - Setup Hugo
@@ -144,14 +146,15 @@ What is really cool about Codespaces is that we can actually visit your site thr
     ```
     <img src="./images/git-status.PNG" alt="Git Status"/>
 
-    This is a useful command, and one to use often. It tells us a few things about our Git repository. 
+    This is a useful command, and one to use often. It tells us a few things about our git repository. 
 
-    - We are on the master branch
+    - We are on the master (main) branch
     - We haven't made any commits yet
     - We have changes that need to be committed
     - We have untracked files
 
-    Todo: insert guidance on branches, commits, tracking files.
+
+    >Note: If you need a quick primer on git, please check out [FreeCodeCamp](https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/) which is about a ten minute read. 
 
 1. In your Codespace terminal, type each command below. Be sure to replace your email and your name.
 
@@ -161,13 +164,13 @@ What is really cool about Codespaces is that we can actually visit your site thr
     git add .
     git commit -m 'adding my static site files'
     ```
-    What you have done here is asked git to track those files and folders that are necessary to build your static site. You have also configured git to use your name and email, so any commit you make can be traced back to you. 
+    What you have done here is asked git to track the files and folders that are necessary to build your static site. You have also configured git to use your name and email, so any change you make can be traced back to you. 
 
     <img src="./images/git-commit.PNG" alt="Git commit"/>
 
-    Now we have git configured locally, we need to create a repository to host our code. We shouldn't rely on keeping our code locally or in a Codespace.
+    Now we have git configured locally, we need to create a repository to host our code. We shouldn't rely on keeping our code locally or in a Codespace. If we were working on a team blog, or building a bigger website, we need to be able to collaborate with others - this is where GitHub repositories come in.
 
-1. Open up a new browser and type **repo.new** - this is actually a domain owned by GitHub that gives us a nice shortcut to create a new repo! You may be prompted to log in or create an account.
+1. Open up a new browser and type **repo.new** - this is actually a domain owned by GitHub that gives us a nice shortcut to create a new repo! You may be prompted to log in or create an account if you haven't done so already.
 
 1. Create a new repo called learningday - but don't initialize it yet (we are going to push our existing repository instead).
 
@@ -210,7 +213,7 @@ Azure Static Web Apps is a service that automatically builds and deploys web app
         <img src="./images/create-static-site2.PNG" alt="Create static web app"/>
 1. Click on **Sign in with GitHub** and authorise connection.
 1. Fill in the following details:
-**
+
     - Organisation: **Your GitHub Account name**
     - Repository: **learningday**
     - Branch: **master**
@@ -250,9 +253,13 @@ Azure Static Web Apps is a service that automatically builds and deploys web app
 
 ## Step 6 - Use CI & CD to update the blog
 
-Continuous integration is..
+**Continuous integration** is the process of automating the build and testing of code every time a change is committed to version control.
 
-Continuous deployment is.. 
+**Continuous deployment** is the process of deploying software frequently, and in an automated way.
+
+You are going to make some changes to your blog now, and commit those changes to your GitHub repo. Then, automatically, GitHub Actions will build your blog and deploy it to Azure.
+
+In a more real world scenario, we could make sure that we were running tests to make sure the blog was still in a deployable state, and not broken by any erroneous changes.
 
 1. Go back to your Codespace terminal.
 
@@ -304,11 +311,25 @@ Continuous deployment is..
 
     <img src="./images/blog.PNG" alt="blog"/>
 
-### Wrap Up - What have I learned?
+### Wrap Up
 
-ToDo
+Well done, you made it to the end!
 
-##### Encourage people to share their first blog post on LinkedIn & Twitter with a #LearningDay? 
+At this point you should have your own blog running in Azure, with version control and a CI/CD pipeline set up for automated deployment.
 
-##### Could have a Logic App triggering on when it detects a new post 
+You learned:
 
+1. How to work with version control using git and GitHub
+1. How to develop from anywhere using Codespaces
+1. How to navigate the Azure portal and create resources
+1. About the fundamentals of Continuous Integration and Continuous Deployment
+
+### Next Steps
+
+- Share your blog on LinkedIn!
+
+- Customise it even more by installing a new [theme](https://themes.gohugo.io/)
+
+- Explore the use of [trunk based development](https://trunkbaseddevelopment.com/#one-line-summary) to protect your main branch
+
+- Keep learning about DevOps - http://aka.ms/DevOps
