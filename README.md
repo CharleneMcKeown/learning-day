@@ -9,10 +9,10 @@ This workshops requires no prior knowledge of git, GitHub or Azure.
 ## Pre-reqs
 
 1. Azure Visual Studio Subscription enabled
-    - Go to http://my.visualstudio.com/benefits
+    - Go to [http://my.visualstudio.com/benefits](http://my.visualstudio.com/benefits)
 
 1. GitHub Account
-    - Go to https://github.com/join
+    - Go to [https://github.com/join](https://github.com/join)
 
 ## Step 1 - Set up your workspace
 
@@ -21,7 +21,7 @@ This workshops requires no prior knowledge of git, GitHub or Azure.
 It's a really quick and easy way to start developing software or working on projects, without having to install software on your own computer. Codespaces provides you with Visual Studio Code and is configured to run git. You can even configure it with other tools and dependencies you need for your specific project.
 
 
-1. Visit https://aka.ms/vso-login to log in and get started. You will need to use the identity you used when creating your Visual Studio Subscription.
+1. Visit [https://aka.ms/vso-login](https://aka.ms/vso-login) to log in and get started. You will need to use the identity you used when creating your Visual Studio Subscription.
 
 1. If you have never used Codespaces before, you'll need to create a plan. Click on **Create Codespace** to create a billing plan. 
 
