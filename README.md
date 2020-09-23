@@ -9,7 +9,10 @@ This workshops requires no prior knowledge of git, GitHub or Azure.
 ## Pre-reqs
 
 1. Azure Visual Studio Subscription enabled
+    - Go to http://my.visualstudio.com/benefits
+
 1. GitHub Account
+    - Go to https://github.com/join
 
 ## Step 1 - Set up your workspace
 
