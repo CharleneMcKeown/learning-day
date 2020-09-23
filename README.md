@@ -111,7 +111,7 @@ Back to Hugo. It's open source, extremely popular, and it has a bunch of templat
     <br>
     <img src="./images/hugo-new.PNG" alt="Create new Hugo site" width=600px />
     <br>
-1. Next, let's add a theme to the website.
+1. Next, let's add a theme to the website by running the following commands:
     
     ```
     cd static-blog
@@ -119,17 +119,17 @@ Back to Hugo. It's open source, extremely popular, and it has a bunch of templat
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
     ```
 
-    The first command changes directory into the static site folder. The second command initiliazes this folder as a Git repository. The third command adds a reference to a specific theme for Hugo, which can be found in another Github repository. 
+    The first command changes directory into the static site folder. The second command initializes this folder as a git repository. The third command adds a reference to a specific theme for Hugo, which can be found in another Github repository. 
     <br>
     <img src="./images/git-init.PNG" alt="Git Init" width=600px />
     <br>
 
-    We need to add our theme to a configuration file, which lets Hugo know what we want the site to look like:
+    We need to add our theme to a configuration file, which lets Hugo know what we want the site to look like. To do this, run this command:
 
     ```
     echo 'theme = "ananke"' >> config.toml
     ```
-1. So far we have typed a bunch of commands. You have enough at this point to actually check out what your website looks like. Type one more command:
+1. You have enough at this point to actually check out what your website looks like. Type one more command:
 
     ```
     hugo server -D
@@ -168,7 +168,7 @@ What is really cool about Codespaces is that we can actually visit your site thr
     git add .
     git commit -m 'adding my static site files'
     ```
-    What you have done here is asked git to track the files and folders that are necessary to build your static site. You have also configured git to use your name and email, so any change you make can be traced back to you. 
+    What you have done here is asked git to track the files and folders that are necessary to build your static site. You have also configured git to use your name and email, so any change you make can be traced back to you. This is really useful when working with other people on the same code base.
 
     <img src="./images/git-commit.PNG" alt="Git commit"/>
 
@@ -176,7 +176,9 @@ What is really cool about Codespaces is that we can actually visit your site thr
 
 1. Open up a new browser and type **repo.new** - this is actually a domain owned by GitHub that gives us a nice shortcut to create a new repo! You may be prompted to log in or create an account if you haven't done so already.
 
-1. Create a new repo called learningday - but don't initialize it yet (we are going to push our existing repository instead).
+1. Create a new repo called learningday - but don't initialize it yet (we are going to push our existing repository instead). Click **Create repository**.
+
+    >Note: In the image below, you will see marketplace apps. Don't worry, you're not expected to have these GitHub apps for this workshop.
 
     <img src="./images/new-repo.PNG" alt="New repo"/>
 
