@@ -28,6 +28,8 @@ It's a really quick and easy way to start developing software or working on proj
     <br>
     <img src="./images/create-cs1.PNG" alt="Create Billing Plan" width=400px />
 
+    >Note: If you get a **TimedoutWaitingForRegisterResourceProvider** error, click **Cancel** and try again. Sometimes there is a delay in the background whilst Codespaces is enabled on your Azure subscription.
+
 1. Now you can create your Codespace. Give it a name, and then paste in the following link in the **Git Repository** field. 
     <br>
     ```
@@ -40,7 +42,6 @@ It's a really quick and easy way to start developing software or working on proj
     After a few moments, you should see your new Codespace ready to go! 
 
     <img src="./images/vscode.PNG" alt="Create Codespace" width=800px />
-
 
 On the left hand side, you will see a list of files - these files automatically got added to our codespace based on the Hugo GitHub repo we specified earlier. 
 
@@ -326,10 +327,16 @@ You learned:
 
 ### Next Steps
 
-- Share your blog on LinkedIn!
+- **Share** your blog on LinkedIn! 
 
-- Customise it even more by installing a new [theme](https://themes.gohugo.io/)
+- **Create** more content - a good place to start would be sharing your thoughts on the recent Ignite news.
 
-- Explore the use of [trunk based development](https://trunkbaseddevelopment.com/#one-line-summary) to protect your main branch
+- **Customise** it even more by installing a new [theme](https://themes.gohugo.io/) or assign a custom domain to your blog. You need to have purchased your own domain and then follow this [guide](https://docs.microsoft.com/en-us/azure/static-web-apps/custom-domain).
 
-- Keep learning about DevOps - http://aka.ms/DevOps
+- **Explore** the use of [trunk based development](https://trunkbaseddevelopment.com/#one-line-summary) to protect your main branch
+
+- **Improve** this workshop! [Fork it](https://guides.github.com/activities/forking/) and contribute back to the community.
+
+- **Keep learning** about DevOps - http://aka.ms/DevOps
+
+- **Keep learning** about GitHub - https://lab.github.com/
