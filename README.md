@@ -57,7 +57,7 @@ Dynamic sites work differently. They generate their content based on making a da
 
 ###### A History Lesson
 
-Back in the early days of the web, static sites were prevalent. [Geocities, anyone?!](https://www.geocitiesarchive.org/index.html)
+Back in the early days of the web, static sites were common. [Geocities, anyone?!](https://www.geocitiesarchive.org/index.html)
 
 As time passed and e-commerce become more prevalent, dynamic sites backed by databases became the norm, allowing users to log into websites, place orders and write reviews. 
 
