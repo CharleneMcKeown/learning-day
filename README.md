@@ -46,7 +46,7 @@ It's a really quick and easy way to start developing software or working on proj
 
     <img src="./images/vscode.PNG" alt="Create Codespace" width=800px />
 
-On the left hand side, you will see a list of files - these files automatically got added to our codespace based on the Hugo GitHub repo we specified earlier. 
+On the left hand side, you will see a list of files - these files automatically got added to your codespace based on the Hugo GitHub repo you specified earlier. 
 
 
 ## Step 2 - Setup Hugo
@@ -84,7 +84,7 @@ Back to Hugo. It's open source, extremely popular, and it has a bunch of templat
     
     <img src="./images/install-hugo.PNG" alt="Install Hugo" width=600px />
 
-    We are simply installing Hugo to our Codespace environment with this command. You will see a lot of scrolling text for a minute or two. Wait for this to complete, and then add Hugo to your path by typing the below command.
+    You are simply installing Hugo to your Codespace environment with this command. You will see a lot of scrolling text for a minute or two. Wait for this to complete, and then add Hugo to your path by typing the below command.
 
     ```
     export PATH=/go/bin:$PATH
@@ -124,7 +124,7 @@ Back to Hugo. It's open source, extremely popular, and it has a bunch of templat
     <img src="./images/git-init.PNG" alt="Git Init" width=600px />
     <br>
 
-    We need to add our theme to a configuration file, which lets Hugo know what we want the site to look like. To do this, run this command:
+    You need to add your theme to a configuration file, which lets Hugo know what you want the site to look like. To do this, run this command:
 
     ```
     echo 'theme = "ananke"' >> config.toml
@@ -136,7 +136,7 @@ Back to Hugo. It's open source, extremely popular, and it has a bunch of templat
     ```
     <img src="./images/hugo-server.PNG" alt="Hugo server" width=600px />
 
-What is really cool about Codespaces is that we can actually visit your site through the magic of port forwarding! Your website is now running inside your Codespace. Click on the link in your terminal to visit it.
+What is really cool about Codespaces is that you can actually visit your site through the magic of port forwarding! Your website is now running inside your Codespace. Click on the link in your terminal to visit it.
 
 <img src="./images/hugo-site.PNG" alt="Hugo site" width=600px />
 
@@ -150,12 +150,12 @@ What is really cool about Codespaces is that we can actually visit your site thr
     ```
     <img src="./images/git-status.PNG" alt="Git Status"/>
 
-    This is a useful command, and one to use often. It tells us a few things about our git repository. 
+    This is a useful command, and one to use often. It tells you a few things about your git repository. 
 
-    - We are on the master (main) branch
-    - We haven't made any commits yet
-    - We have changes that need to be committed
-    - We have untracked files
+    - You are on the master (main) branch
+    - You haven't made any commits yet
+    - You have changes that need to be committed
+    - You have untracked files
 
 
     >Note: If you need a quick primer on git, please check out [FreeCodeCamp](https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/) which is about a ten minute read. 
@@ -172,11 +172,11 @@ What is really cool about Codespaces is that we can actually visit your site thr
 
     <img src="./images/git-commit.PNG" alt="Git commit"/>
 
-    Now we have git configured locally, we need to create a repository to host our code. We shouldn't rely on keeping our code locally or in a Codespace. If we were working on a team blog, or building a bigger website, we need to be able to collaborate with others - this is where GitHub repositories come in.
+    Now that you have git configured locally, you need to create a repository to host your code. You shouldn't rely on keeping your code locally or in a Codespace. If you were working on a team blog, or building a bigger website, you need to be able to collaborate with others - this is where GitHub repositories come in.
 
-1. Open up a new browser and type **repo.new** - this is actually a domain owned by GitHub that gives us a nice shortcut to create a new repo! You may be prompted to log in or create an account if you haven't done so already.
+1. Open up a new browser and type **repo.new** - this is actually a domain owned by GitHub that gives you a nice shortcut to create a new repo! You may be prompted to log in or create an account if you haven't done so already.
 
-1. Create a new repo called learningday - but don't initialize it yet (we are going to push our existing repository instead). Click **Create repository**.
+1. Create a new repo called learningday - but don't initialize it yet (you are going to push your existing repository instead). Click **Create repository**.
 
     >Note: In the image below, you will see marketplace apps. Don't worry, you're not expected to have these GitHub apps for this workshop.
 
@@ -203,18 +203,18 @@ What is really cool about Codespaces is that we can actually visit your site thr
 
 ## Step 5 - Publish your static site
 
-Now that we have the barebones of your website, and a repo hosting your code, you need somewhere to publish that code to.
+Now that you have the barebones of your website, and a repo hosting your code, you need somewhere to publish that code to.
 
-Azure Static Web Apps is a service that automatically builds and deploys web apps to Azure from a GitHub repository.
+[Azure Static Web Apps](https://azure.microsoft.com/en-us/services/app-service/static/) is a service that automatically builds and deploys web apps to Azure from a GitHub repository.
 
-1. Navigate to http://portal.azure.com and log in.
+1. Navigate to [http://portal.azure.com](http://portal.azure.com) and log in.
 1. On the homepage, search for **Static Web Apps** and click on the marketplace icon.
     <img src="./images/create-static-site.PNG" alt="Create static web app"/>
 1. Fill in the following details:
 
     - Subscription: Choose your **Visual Studio Subscription**
     - Resource Group:Create a new one called **learningday-rg**
-    - Static Web App Name: **learning day**
+    - Static Web App Name: **learningday**
     - Region: **West Europe**
         <img src="./images/create-static-site2.PNG" alt="Create static web app"/>
 1. Click on **Sign in with GitHub** and authorise connection.
@@ -235,7 +235,7 @@ Azure Static Web Apps is a service that automatically builds and deploys web app
 1. Head back to your GitHub repo and refresh the page. You will see a new folder in your repo called **.github/workflows**
     <img src="./images/workflowfolder.PNG" alt="workflow"/>
 
-    When you created the static web app just now, Azure pushed a new commit to our repo which contained a file called **azure-static-web-apps-yourappname.yml**. 
+    When you created the static web app just now, Azure pushed a new commit to your repo which contained a file called **azure-static-web-apps-yourappname.yml**. 
 
     This is a [workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows) file, and it contains all the instructions needed to build and deploy your static web app to Azure. 
     
@@ -265,7 +265,7 @@ Azure Static Web Apps is a service that automatically builds and deploys web app
 
 You are going to make some changes to your blog now, and commit those changes to your GitHub repo. Then, automatically, GitHub Actions will build your blog and deploy it to Azure.
 
-In a more real world scenario, we could make sure that we were running tests to make sure the blog was still in a deployable state, and not broken by any erroneous changes.
+In a more real world scenario, you could run tests to make sure the blog was still in a deployable state, and not broken by any erroneous changes.
 
 1. Go back to your Codespace terminal.
 
@@ -279,7 +279,11 @@ In a more real world scenario, we could make sure that we were running tests to 
 1. Find the file you just created in the file explorer to the left. It will be in **static-blog/content/posts**.
     <img src="./images/first-post.PNG" alt="First post"/>
 
-1. Set draft: false and write some text below the second ---. Once you are finished, save the post by typing Ctrl + S.
+1. Set **draft: false** and write some text below the second **---**. This will be your first post!
+
+    If you are stuck for inspiration, you could blog about a new announcement from Ignite 2020 that really impressed you!
+
+    Once you are finished, save the post by typing Ctrl + S.
 
 1. Find the config.toml (it will be in the root of your static-blog folder) and change the title name to whatever you want it to be, then save it with Ctrl + S.
     <img src="./images/title.PNG" alt="title"/>
@@ -289,7 +293,7 @@ In a more real world scenario, we could make sure that we were running tests to 
     ```
     git pull
     ```
-    This command pulls down any changes from our remote repo into our local repo. You will see that the .github folder now exists locally, along with your workflow file. 
+    This command pulls down any changes from your remote repo into your local repo. You will see that the .github folder now exists locally, along with your workflow file. 
 
     Always do a git pull before a git push!
 
@@ -299,7 +303,7 @@ In a more real world scenario, we could make sure that we were running tests to 
     ```
     Remember, this commands adds any new or untracked files we created to git. 
 
-1. Now we can practice continuous integration! We have made changes locally, so we can now commit and push those to our GitHub repo. Type:
+1. Now you can practice continuous integration! You have made changes locally, so you can now commit and push those to your GitHub repo. Type:
 
     ```
     git commit -m "added my first blog post"
@@ -309,7 +313,7 @@ In a more real world scenario, we could make sure that we were running tests to 
 
     <img src="./images/content-posts.PNG" alt="content/posts"/>
 
-1. Click on **Actions** to observe your workflow running for a second time. You can see that the workflow tell us that it is linked to the commit we just made (added my first blog post). Optionally, click on it to view the logs again.
+1. Click on **Actions** to observe your workflow running for a second time. You can see that the workflow tells you that it is linked to the commit you just made (added my first blog post). Optionally, click on it to view the logs again.
 
     <img src="./images/workflow2.PNG" alt="content/posts"/>
 
